@@ -22,7 +22,7 @@ export const CategoryLink = ({
           ? "underline "
           : "hover:underline"
       }`}
-      href={`/articles/top-headlines?country=${country}&category=${category.toLocaleLowerCase()}&page=1`}
+      href={`/articles/top-headlines?country=${country}&category=${category.toLowerCase()}&page=1`}
     >
       {category}
     </LinkComponent>

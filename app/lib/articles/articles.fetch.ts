@@ -49,7 +49,9 @@ export const fetchArticles = async (
       : "top-headlines",
     country: reqSearchParams.country ? reqSearchParams.country : "",
     category: reqSearchParams.category ? reqSearchParams.category : "",
-    q: reqSearchParams.q ? encodeURIComponent(reqSearchParams.q) : "",
+    q: reqSearchParams.q
+      ? encodeURIComponent(reqSearchParams.q.toLowerCase())
+      : "",
     pageSize: pageSize,
     page: reqSearchParams.page ? reqSearchParams.page : "1",
   };

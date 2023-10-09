@@ -37,7 +37,6 @@ export const PaginationButtons = ({
           href={`/articles/${apiEndpoint}${q ? `?q=${q}` : ""}${
             country ? `?country=${country}` : ""
           }${category ? `&category=${category}` : ""}&page=${prevPage}`}
-          scroll={false}
         >
           Previous
         </LinkComponentOutline>
@@ -50,7 +49,6 @@ export const PaginationButtons = ({
           href={`/articles/${apiEndpoint}${q ? `?q=${q}` : ""}${
             country ? `?country=${country}` : ""
           }${category ? `&category=${category}` : ""}&page=${nextPage}`}
-          scroll={false}
         >
           Next
         </LinkComponentOutline>
