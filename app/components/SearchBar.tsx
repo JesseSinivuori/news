@@ -2,7 +2,7 @@
 import { useRef } from "react";
 import { Button } from "./ui/button";
 import { Input } from "./ui/input";
-import { useRouter } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
 import { qSchema } from "../lib/articles/articles.zod";
 import toast from "react-hot-toast";
 import { useFilterMenuContext } from "../providers/FilterMenuProvider";
@@ -15,6 +15,9 @@ export function SearchBar({
 
   const router = useRouter();
   const inputRef = useRef<HTMLInputElement>(null);
+
+  const pathname = usePathname();
+  if (pathname === "/landing") return null;
 
   const handleSearch = () => {
     const q = inputRef.current?.value;

@@ -6,7 +6,7 @@ import {
   SelectTrigger,
   SelectValue,
 } from "@/app/components/ui/select";
-import { useRouter, useSearchParams } from "next/navigation";
+import { usePathname, useRouter, useSearchParams } from "next/navigation";
 import { initialSearchParams } from "../lib/articles/initialSearchParams";
 
 export function CountrySelect() {
@@ -14,6 +14,9 @@ export function CountrySelect() {
   const searchParams = useSearchParams();
   const category = searchParams.get("category") || initialSearchParams.category;
   const q = searchParams.get("q");
+
+  const pathname = usePathname();
+  if (pathname === "/landing") return null;
 
   const handleValueChange = (value: string) => {
     const url = `/articles/top-headlines?country=${value}&category=${category}&page=1`;

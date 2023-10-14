@@ -27,7 +27,7 @@ export default function RootLayout({
               toastOptions={{ className: "!bg-zinc-50 !text-zinc-950/90" }}
             />
             <Navbar />
-            <main className="flex flex-col pt-16 w-full max-w-[1440px]">
+            <main className="flex flex-col pt-16 w-full max-w-[1440px] overflow-hidden">
               {children}
             </main>
           </FilterMenuProvider>

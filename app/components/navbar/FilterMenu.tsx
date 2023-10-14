@@ -4,12 +4,16 @@ import { CategoryBar } from "../CategoryBar";
 import { SearchBar } from "../SearchBar";
 import { useFilterMenuContext } from "@/app/providers/FilterMenuProvider";
 import { CountrySelect } from "../CountrySelect";
+import { usePathname } from "next/navigation";
 
 export function FilterMenu({
   className,
   ...props
 }: React.ComponentProps<"div">) {
   const { filterMenuIsOpen, setFilterMenuIsOpen } = useFilterMenuContext();
+
+  const pathname = usePathname();
+  if (pathname === "/landing") return null;
 
   return (
     <div className={`${className || ""} flex sm:hidden `} {...props}>
@@ -53,7 +57,7 @@ const FilterIcon = ({ className }: { className?: string }) => (
     viewBox="0 0 24 24"
     strokeWidth={1.5}
     stroke="currentColor"
-    className={`${className || ""}w-6 h-6`}
+    className={`${className || ""} w-6 h-6`}
   >
     <path
       strokeLinecap="round"
