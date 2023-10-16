@@ -1,26 +1,31 @@
 export function FeaturesSection() {
   return (
-    <section className="flex flex-wrap gap-8 w-full justify-center">
-      <Card
-        icon={<SearchIcon />}
-        label={"Search"}
-        text={"Access a world of information with a simple search."}
-      />
-      <Card
-        icon={<GlobeIcon />}
-        label={"Global"}
-        text={"The world's events, all in one place."}
-      />
-      <Card
-        icon={<TrendingUpIcon />}
-        label={"Trending"}
-        text={"See what's catching everyone's attention right now."}
-      />
-      <Card
-        icon={<BoltIcon />}
-        label={"Breaking News"}
-        text={"Stay updated with the freshest news as it happens."}
-      />
+    <section className="flex flex-col justify-center items-center gap-16">
+      <h2 className="font-extrabold text-center text-3xl text-zinc-950/90">
+        Features
+      </h2>
+      <div className="flex flex-wrap gap-8 w-full justify-center">
+        <Card
+          icon={<SearchIcon />}
+          label={"Search"}
+          text={"Access a world of information with a simple search."}
+        />
+        <Card
+          icon={<GlobeIcon />}
+          label={"Global"}
+          text={"The world's events, all in one place."}
+        />
+        <Card
+          icon={<TrendingUpIcon />}
+          label={"Trending"}
+          text={"See what's catching everyone's attention right now."}
+        />
+        <Card
+          icon={<BoltIcon />}
+          label={"Breaking News"}
+          text={"Stay updated with the freshest news as it happens."}
+        />
+      </div>
     </section>
   );
 }

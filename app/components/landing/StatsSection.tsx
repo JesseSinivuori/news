@@ -2,7 +2,10 @@ import { LinkComponentButtonBlue } from "../ui/link";
 
 export function StatsSection() {
   return (
-    <section>
+    <section className="flex flex-col justify-center items-center gap-16">
+      <h2 className="font-extrabold text-center text-3xl text-zinc-950/90">
+        Stats
+      </h2>
       <div className="flex flex-wrap justify-center gap-16">
         <div className="text-center">
           <h2 className="font-extrabold text-3xl text-zinc-950/90">1M+</h2>
