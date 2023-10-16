@@ -3,7 +3,7 @@ import Image from "next/image";
 export function ArticleShowcase() {
   return (
     <div className="flex flex-col pb-16">
-      <div className="flex flex-col justify-center items-center  gap-16">
+      <div className="flex flex-col justify-center items-center gap-16">
         <h2 className="font-extrabold text-center text-3xl text-zinc-950/90">
           Discover articles
         </h2>
